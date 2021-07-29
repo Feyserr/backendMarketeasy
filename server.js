@@ -10,7 +10,7 @@ app.use(express.urlencoded({
   }));
 app.use(express.json({ type: 'application/json' }));
 app.use(cors());
-app.use('/', require('./server/route/funcionariosRoute'));
+app.use('/', require('./server/route/productsRoute'));
 
 app.listen(process.env.PORT || 3000, function(){
   console.log("Server running");
