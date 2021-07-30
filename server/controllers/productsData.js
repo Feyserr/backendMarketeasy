@@ -53,3 +53,9 @@ exports.deleteProducts = async(req, res) =>{
     });
 }
 
+exports.getProductsId = (req, res) => {
+    const productsId = parseInt(req.params.id);
+    return database.query(`SELECT * FROM public.products WHERE id = ${productsId}`);
+    
+}
+

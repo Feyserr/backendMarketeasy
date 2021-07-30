@@ -12,16 +12,21 @@ router.get('/products', async function(req, res){
 router.post('/newProducts', async function(req, res){
     const newProduct = await productsService.newProduct(req, res);
     res.json(newProduct);
-})
+});
 
-router.put('/editProducts', async function(req, res){
+router.put('/products/:id', async function(req, res){
     const editProduct = await productsService.editProducts(req, res);
     res.json(editProduct);
-})
+});
 
-router.delete('/deleteProducts', async function(req, res){
-    const deleteProduct = await productsService.deleteProduct(req, res);
+router.delete('/products', async function(req, res){
+    const deleteProduct = await productsService.deleteProducts(req, res);
     res.json(deleteProduct);
 });
+
+router.get('/products/:id'), async function(req, res){
+    const productsId = await productsService.getProductsId(req, res);
+    res.json(productsId);
+}
 
 module.exports = router;

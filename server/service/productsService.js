@@ -18,3 +18,7 @@ exports.editProducts = function(req, res){
 exports.deleteProducts = function(req, res){
     return productsData.deleteProducts(req, res);
 }
+
+exports.getProductsId = function(req, res){
+    return productsData.getProductsId(req, res);
+}
